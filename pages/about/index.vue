@@ -1,6 +1,8 @@
 <template>
   <section class="container">
-    <div class="page">home</div>
+    <div>
+      <div class="page">about page</div>
+    </div>
   </section>
 </template>
 

@@ -23,7 +23,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content {
-  padding: 100px 0px;
-}
 </style>
