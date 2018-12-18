@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="page">home</div>
+    <div class="page container">Some kind of splash art, small intro and quick links</div>
   </section>
 </template>
 

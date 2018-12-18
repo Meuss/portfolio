@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper" :class="{swiperAlive: swiperAlive}">
     <div class="progress">
-      <div class="indeterminate"></div>
+      <div class="indeterminate">loadinnng</div>
     </div>
     <div v-swiper:mySwiper="swiperOptions" ref="mySwiper">
       <div class="swiper-wrapper">
@@ -32,10 +32,6 @@
 
 <script>
 export default {
-  head: {
-    link: [{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css' }],
-    script: [{ src: 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js' }],
-  },
   data() {
     return {
       slides: [

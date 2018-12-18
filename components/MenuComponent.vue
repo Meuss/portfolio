@@ -1,7 +1,16 @@
 <template>
   <ul class="menu">
     <li>
+      <nuxt-link to="/">home</nuxt-link>
+    </li>
+    <li>
+      <nuxt-link to="/about">about</nuxt-link>
+    </li>
+    <li>
       <nuxt-link to="/portfolio">portfolio</nuxt-link>
+    </li>
+    <li>
+      <nuxt-link to="/contact">contact</nuxt-link>
     </li>
   </ul>
 </template>

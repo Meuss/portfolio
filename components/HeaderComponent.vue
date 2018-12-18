@@ -1,6 +1,5 @@
 <template>
   <header>
-    <nuxt-link to="/">Logo</nuxt-link>
     <MenuComponent/>
   </header>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="site-container">
-    <nuxt/>
     <HeaderComponent/>
+    <nuxt/>
   </div>
 </template>
 
@@ -44,5 +44,6 @@ body {
   min-height: 100vh;
   background-image: url('/desk.jpeg');
   background-size: cover;
+  background-position: center center;
 }
 </style>
