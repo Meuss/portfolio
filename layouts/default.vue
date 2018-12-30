@@ -1,13 +1,10 @@
 <template>
-  <div class="site-container">
-    <HeaderComponent/>
+  <div class="site-container" :class="currentpage">
     <nuxt/>
   </div>
 </template>
 
 <script>
-import HeaderComponent from '@/components/HeaderComponent';
-
 export default {
   head: {
     link: [{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css' }],
@@ -16,38 +13,24 @@ export default {
   data() {
     return {};
   },
-  components: {
-    HeaderComponent,
+  computed: {
+    currentpage() {
+      return this.$route.name;
+    },
   },
+  components: {},
 };
 </script>
 
 <style lang="scss">
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+@import '~/assets/styles/typo.scss';
 .site-container {
   margin: 0 auto;
-  // padding: 0px 10%;
 }
-body {
+.site-container .page {
   min-height: 100vh;
-  background-image: url('/desk.jpeg');
-  background-size: cover;
-  background-position: center center;
+}
+section {
+  padding: 100px 15%;
 }
 </style>

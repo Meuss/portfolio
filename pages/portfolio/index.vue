@@ -1,11 +1,7 @@
 <template>
-  <section>
-    <div>
-      <div class="page">
-        <Slider/>
-      </div>
-    </div>
-  </section>
+  <div class="page">
+    <Slider/>
+  </div>
 </template>
 
 <script>
@@ -23,4 +19,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.site-container.portfolio .page {
+  background-image: url('/desk.jpeg');
+  background-size: cover;
+  background-position: center center;
+}
 </style>
