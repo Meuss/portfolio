@@ -2,14 +2,14 @@
   <div class="page">
     <section class="landing">
       <h1>Thomas Miller</h1>
-      <h2>I build websites</h2>
+      <h2>{{ $t('I-build-websites') }}</h2>
       <landing-icons></landing-icons>
     </section>
     <section class="who">
-      <h3>Who I am</h3>
-      <p>I am a frontend developer from Bulle, Switzerland. I’ve been building websites professionnally since 2015.</p>
-      <p>I am currently working at macmac, a small digital & print agency in Marly. I also do some freelancing, when I am not working on my own side projects.</p>
-      <p>One day I wanted to learn how the internet worked. I haven’t stopped learning since, and became obsessed with building things on the web.</p>
+      <h3>{{ $t('who.who-1') }}</h3>
+      <p>{{ $t('who.who-2') }}</p>
+      <p>{{ $t('who.who-3') }}</p>
+      <p>{{ $t('who.who-4') }}</p>
     </section>
     <section class="what">
       <h3>What I do</h3>

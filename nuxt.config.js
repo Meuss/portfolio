@@ -1,5 +1,6 @@
 const pkg = require('./package');
-
+const translationsFR = require('./assets/translations/fr.json');
+const translationsEN = require('./assets/translations/en.json');
 module.exports = {
   mode: 'universal',
 
@@ -20,8 +21,39 @@ module.exports = {
   plugins: [{ src: '~/plugins/nuxt-swiper-plugin.js', ssr: false }],
 
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
+    ['@nuxtjs/axios'],
+    [
+      'nuxt-i18n',
+      {
+        locales: [{ code: 'fr', iso: 'fr-FR' }, { code: 'en', iso: 'en-US' }],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en',
+          messages: {
+            en: translationsEN,
+            fr: translationsFR,
+          },
+        },
+        detectBrowserLanguage: {
+          // A cookie is set once a user has been redirected to his preferred language to prevent subsequent redirections
+          useCookie: true,
+          cookieKey: 'i18n_redirected',
+        },
+        strategy: 'prefix_except_default',
+        seo: true,
+        vuex: {
+          // Module namespace
+          moduleName: 'i18n',
+          // Mutations config
+          mutations: {
+            // Mutation to commit to store current locale, set to false to disable
+            setLocale: 'I18N_SET_LOCALE',
+            // Mutation to commit to store current message, set to false to disable
+            setMessages: 'I18N_SET_MESSAGES',
+          },
+        },
+      },
+    ],
   ],
 
   axios: {

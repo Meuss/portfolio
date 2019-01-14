@@ -188,12 +188,13 @@
   margin-top: 20px;
 }
 a {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
   margin: 0 15px;
   background-color: $gray;
   border-radius: 50%;
